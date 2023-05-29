@@ -1,11 +1,11 @@
-package Post_req_repositoryPackage;
+package po_req_repo_Package;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import commonFunctionPackage.Utility_Common_Functions;
+import comFUnPackage.comUtilFunc;
 
-public class post_req_repository {
+public class re_po_repository {
 	public static String baseURI()
 	{
 		String baseURI="https://reqres.in/";
@@ -17,7 +17,7 @@ public class post_req_repository {
 	}
 	public static String post_TC_1() throws IOException
 	{
-		ArrayList<String>data=Utility_Common_Functions.readdataexcel("Post_Test_Data",
+		ArrayList<String>data=comUtilFunc.readdataexcel("Post_Test_Data",
 				"Post_TC_2");
 		String req_name=data.get(1);
 		String req_job=data.get(2);

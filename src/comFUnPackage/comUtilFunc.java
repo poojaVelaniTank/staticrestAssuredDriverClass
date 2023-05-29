@@ -1,4 +1,4 @@
-package commonFunctionPackage;
+package comFUnPackage;
 
 import java.io.File;
 
@@ -15,7 +15,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class utility_coomon_functions {
+public class comUtilFunc {
 	
 	public static void evidencefilecreator(String filename,String requestBody,String responseBody) throws IOException {
 		File newfile=new File("C:\\Users\\admin\\Desktop\\New folder (2)\\"+filename+".txt");

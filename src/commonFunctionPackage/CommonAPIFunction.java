@@ -1,9 +1,9 @@
-package comFUnPackage;
+package commonFunctionPackage;
 
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
 
-public class ComAPIFunc {
+public class CommonAPIFunction {
 	
 	public static int res_statusCode(String baseURI,String requestBody,String resource) {
 		

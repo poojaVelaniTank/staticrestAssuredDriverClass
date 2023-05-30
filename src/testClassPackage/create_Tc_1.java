@@ -1,28 +1,28 @@
-package teClassPack;
+package testClassPackage;
 import java.io.IOException;
 import java.time.LocalDate;
 import org.testng.Assert;
 
-import comFUnPackage.ComAPIFunc;
-import comFUnPackage.comUtilFunc;
-import teClassPack.create_Tc_1;
+import commonFunctionPackage.CommonAPIFunction;
+import commonFunctionPackage.utilityCommonFunction;
 import io.restassured.path.json.JsonPath;
-import po_req_repo_Package.re_po_repository;
+import po_req_repo_Package.req_post_repository;
+import testClassPackage.create_Tc_1;
 
 public class create_Tc_1 {
 	public static void execute() throws IOException {
 		
 		for(int i=0 ; i<5; i++)
 		{
-			int res_statusCode=ComAPIFunc.res_statusCode(re_po_repository.baseURI(),
-					re_po_repository.post_resource(),re_po_repository.post_resource());
+			int res_statusCode=CommonAPIFunction.res_statusCode(req_post_repository.baseURI(),
+					req_post_repository.post_resource(),req_post_repository.post_resource());
 			if(res_statusCode==201)
 			{
-			String responsebody=ComAPIFunc.res_responseBody(re_po_repository.baseURI(),
-					re_po_repository.post_resource(),re_po_repository.post_resource());
+			String responsebody=CommonAPIFunction.res_responseBody(req_post_repository.baseURI(),
+					req_post_repository.post_resource(),req_post_repository.post_resource());
 			System.out.println(responsebody);
 			create_Tc_1.validator(responsebody, res_statusCode);
-			comUtilFunc.evidencefilecreator("post_TC_1",re_po_repository.post_TC_1(),responsebody);
+			utilityCommonFunction.evidencefilecreator("post_TC_1",req_post_repository.post_TC_1(),responsebody);
 			break; 
 		}  else
 		{

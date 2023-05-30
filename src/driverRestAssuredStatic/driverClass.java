@@ -1,10 +1,10 @@
-package driverrestAssuredStatic;
+package driverRestAssuredStatic;
 
 import java.io.IOException;
 
-import teClassPack.create_Tc_1;
+import testClassPackage.create_Tc_1;
 
-public class drivClass {
+public class driverClass {
 
 	public static void main(String[] args) throws IOException {
 		create_Tc_1.execute();
